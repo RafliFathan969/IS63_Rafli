@@ -14,19 +14,43 @@
     # OPERATOR PERBANDINGAN (== != > < >= <=)
     # OPERATOR LOGIKA ( AND OR) (&& ||)
 
-    $nilai = 50;
-
-    if($nilai > 50){
-        echo "Kamu Lulus";
-        if($nilai >90){
-            echo ", Nilai A";
-        }
+    $username = "ikram";
+    $password = "123456";
+    
+    if($username == "admin" && $password == "123456"){
+        echo "Login Berhasil";
+    }elseif($username == "admin" && $password !="123456"){
+        echo "Mohon maaf Password kamu salah";
+    }elseif($username != "admin" && $password == "123456"){
+        echo "Username mu salah woi coba kasih yang benar!!";
     }else{
-        echo "Kamu Tidak Lulus";
-        if($nilai >30){
-            echo ", Harus Ikut Remedial";
-        }
+        echo "Woi lu punya akun apa engga";
     }
+
+    // $nama = "Zilong";
+    // $nilai = 0;
+
+    // if($nilai >= 70){
+    //     echo "Selamat $nama, Kamu Lulus";
+    // }elseif($nilai >= 40){
+    //     echo "Hai, $nama. Kamu harus ikut remedial";
+    // }elseif($nilai >= 10){
+    //     echo "Maaf $nama, kamu Tidak lulus";
+    // }else{
+    //     echo "Hati-hati $nama, Kamu akan di DO jika tidak memperbaikan nilai di MK lainnya";
+    // }
+
+    // if($nilai > 50){
+    //     echo "Kamu Lulus";
+    //     if($nilai >90){
+    //         echo ", Nilai A";
+    //     }
+    // }else{
+    //     echo "Kamu Tidak Lulus";
+    //     if($nilai >30){
+    //         echo ", Harus Ikut Remedial";
+    //     }
+    // }
     ?>
 </body>
 </html>
