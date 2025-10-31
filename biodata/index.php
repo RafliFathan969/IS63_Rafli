@@ -22,65 +22,66 @@
                         <h2>Biodata Siswa</h2>
                     </div>
                     <div class="card-body" method="POST">
-                        <form>
+                        <form action="proses_tambah.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
-                                <label for="nama" class="form-label">Nama Lengkap</label>
-                                <input name="nama" type="teks" class="form-control" id="exampleInputEmail1">
-                            </div>
-                            <div class="mb-3">
-                                <label for="nisn" class="form-label">NISN</label>
-                                <input name="nisn" type="teks" class="form-control" id="exampleInputPassword1">
+                                <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
+                                <input name="nama" type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
-                                <label for="tp-lahir" class="form-label">Tempat Lahir</label>
-                                <input name="tp-lahir" type="teks" class="form-control" id="exampleInputPassword1">
+                                <label for="exampleInputEmail1" class="form-label">NISN</label>
+                                <input name="nisn" type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
-                                <label for="tg-lahir" class="form-label">Tanggal Lahir</label>
-                                <input name="tg-lahir" type="date" class="form-control" id="exampleInputPassword1">
+                                <label for="exampleInputEmail1" class="form-label">Tempat Lahir</label>
+                                <input name="tp_lahir" type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
-                                <label for="alamat" class="form-label">Alamat</label>
-                                <input name="alamat" type="teks" class="form-control" id="exampleInputPassword1">
+                                <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
+                                <input name="tg_lahir" type="date" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input name="email" type="email" class="form-control" id="exampleInputPassword1">
+                                <label for="exampleInputEmail1" class="form-label">Alamat</label>
+                                <input name="alamat" type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
                             </div>
-                            Jenis Kelamin
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
-                                value="Laki-laki">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Laki-laki
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                    value="Perempuan" checked>
-                                <label class="form-check-label" for="radioDefault2">
-                                    Perempuan
-                                </label>
-                            </div>
-                            <br>
                             <div class="mb-3">
-                                <label for="jurusan" class="form-label">Jurusan</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option value>Pilih Jurusan</option>
-                                    <option value="1">IPA</option>
-                                    <option value="2">IPS</option>
-                                    <option value="3">AGAMA</option>
-                                    <option value="3">BAHASA</option>
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
+                                <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="jk"
+                                        id="inlineRadio1" value="Laki-laki">
+                                    <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="jk"
+                                        id="inlineRadio2" value="Perempuan">
+                                    <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Jurusan</label>
+                                <select class="form-control" name="jur" id="">
+                                    <option value="">-Pilih Jurusan-</option>
+                                    <option value="IPA">IPA</option>
+                                    <option value="IPS">IPS</option>
+                                    <option value="Bahasa">Bahasa</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="formFile" class="form-label">Foto</label>
-                                <input class="form-control" type="file" id="formFile">
+                                <label for="exampleInputEmail1" class="form-label">Foto</label>
+                                <input name="foto" type="file" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
                             </div>
-                            Pastikan data nya sudah benar
-                            <br>
-                            <br>
-                            <a href="#" class="btn btn-primary">Kirim</a>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
