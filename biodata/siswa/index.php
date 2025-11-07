@@ -7,6 +7,8 @@
     <title>Biodata Siswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="../css/all.css">
 </head>
 
 <body style="background-color:#232954">
@@ -18,8 +20,9 @@
         <div class="row my-5">
             <div class="col-8 m-auto">
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                    <div class="card-header text-center">
+                    <div class="card-header">
                         <b>Biodata Siswa</b>
+                        <a href="form_tambah.php" class="float-end btn btn-primary btn-sm"><i class="fa-solid fa-user-plus"></i>Tambah data</a>
                     </div>
                     <div class="card-body" method="POST">
                         <table class="table">
@@ -53,9 +56,9 @@
                                         <td><?= $data['nisn'] ?></td>
                                         <td><?= $data['tg_lahir'] ?></td>
                                         <td>
-                                            <button class="btn btn-warning btn-sm">detail</button>
-                                            <button class="btn btn-warning btn-sm">edit</button>
-                                            <button class="btn btn-warning btn-sm">hapus</button>
+                                            <button class="btn btn-warning btn-sm"><i class="fa-solid fa-user"></i></button>
+                                            <button class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></button>
+                                            <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     <?php
@@ -71,6 +74,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="../js/all.js"></script>
 </body>
 
 </html>
