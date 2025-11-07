@@ -11,7 +11,7 @@
 
 <body style="background-color:#232954">
     <?php
-    include_once("navbar.php");
+    include_once("../navbar.php");
     ?>
 
     <div class="container">
@@ -57,13 +57,13 @@
                                 <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                                 <br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="jk"
-                                        id="inlineRadio1" value="Laki-laki">
+                                    <input class="form-check-input" type="radio" name="jk" id="inlineRadio1"
+                                        value="Laki-laki">
                                     <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="jk"
-                                        id="inlineRadio2" value="Perempuan">
+                                    <input class="form-check-input" type="radio" name="jk" id="inlineRadio2"
+                                        value="Perempuan">
                                     <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                                 </div>
                             </div>
@@ -83,17 +83,9 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
-                        <h2>Selamat Datang di Aplikasi Biodata Siswa</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
