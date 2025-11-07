@@ -34,25 +34,31 @@
                             </thead>
                             <tbody>
                                 <?php
-                                #1.
+                                #1.Koneksi
                                 include("../koneksi.php");
 
-                                #2.
+                                #2.Query menampilkan data
                                 $qry = "SELECT * FROM biodata";
 
-                                #3.
+                                #3.Menjalankan query
                                 $tampil = mysqli_query($koneksi, $qry);
 
                                 #4.Looping hasil query
-                                foreach($tampil as $data){
-                                ?>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td><?=$data['nama']?></td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <?php
+                                $nomor = 1;
+                                foreach ($tampil as $data) {
+                                    ?>
+                                    <tr>
+                                        <th scope="row"><?= $nomor++ ?></th>
+                                        <td><?= $data['nama'] ?></td>
+                                        <td><?= $data['nisn'] ?></td>
+                                        <td><?= $data['tg_lahir'] ?></td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm">detail</button>
+                                            <button class="btn btn-warning btn-sm">edit</button>
+                                            <button class="btn btn-warning btn-sm">hapus</button>
+                                        </td>
+                                    </tr>
+                                    <?php
                                 }
                                 ?>
                         </table>

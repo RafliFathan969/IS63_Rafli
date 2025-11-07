@@ -21,7 +21,7 @@
                     <div class="card-header text-center">
                         <b>Aplikasi Biodata Siswa</b>
                     </div>
-                    <div class="card-body" method="POST">
+                    <div class="card-body text-center" method="POST">
                         <h2>Selamat Datang di Aplikasi Biodata Siswa</h2>
                     </div>
                 </div>
