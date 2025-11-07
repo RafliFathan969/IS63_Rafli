@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/all.css">
 </head>
 
 <body style="background-color:#232954">
@@ -22,7 +22,8 @@
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
                         <b>Biodata Siswa</b>
-                        <a href="form_tambah.php" class="float-end btn btn-primary btn-sm"><i class="fa-solid fa-user-plus"></i>Tambah data</a>
+                        <a href="form_tambah.php" class="float-end btn btn-primary btn-sm"><i
+                                class="fa-solid fa-user-plus"></i> Tambah data</a>
                     </div>
                     <div class="card-body" method="POST">
                         <table class="table">
@@ -56,9 +57,33 @@
                                         <td><?= $data['nisn'] ?></td>
                                         <td><?= $data['tg_lahir'] ?></td>
                                         <td>
-                                            <button class="btn btn-warning btn-sm"><i class="fa-solid fa-user"></i></button>
+                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-user"></i></button>
                                             <button class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></button>
                                             <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title
+                                                            </h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save
+                                                                changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     <?php
