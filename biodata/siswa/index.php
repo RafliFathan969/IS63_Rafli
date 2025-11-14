@@ -57,43 +57,102 @@
                                         <td><?= $data['nisn'] ?></td>
                                         <td><?= $data['tg_lahir'] ?></td>
                                         <td>
-                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-user"></i></button>
-                                            <button class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></button>
-                                            <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
-
+                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $data['id'] ?>"><i class="fa-solid fa-user"></i></button>
+                                            <a href="formedit.php?<?= $data['id'] ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
+                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?= $data['id'] ?>"><i class="fa-solid fa-trash"></i></button>
+                                            
                                             <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                            <div class="modal fade" id="exampleModal<?= $data['id'] ?>" tabindex="-1"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail
+                                                                <?= $data['nama'] ?>
                                                             </h1>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                                 aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            ...
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Nama</td>
+                                                                        <th scope="row"><?= $data['nama'] ?></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>NISN</td>
+                                                                        <th scope="row"><?= $data['nisn'] ?></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Tempat Lahir</td>
+                                                                        <th scope="row"><?= $data['tp_lahir'] ?></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Tanggal Lahir</td>
+                                                                        <th scope="row"><?= $data['tg_lahir'] ?></th>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tr>
+                                                                    <td>Alamat</td>
+                                                                    <th scope="row"><?= $data['alamat'] ?></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email</td>
+                                                                    <th scope="row"><?= $data['email'] ?></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jenis Kelamin</td>
+                                                                    <th scope="row"><?= $data['jk'] ?></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jurusan</td>
+                                                                    <th scope="row"><?= $data['jur'] ?></th>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-bs-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Save
-                                                                changes</button>
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- Modal Hapus-->
+                                            <div class="modal fade" id="modalhapus<?= $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Yakin Data Dengan Nama <?= $data['nama'] ?> Ingin Dihapus?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <a href="proseshapus.php?id=<?=$data['id']?>" class="btn btn-danger">Hapus</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                         </td>
-                                    </tr>
-                                    <?php
-                                }
-                                ?>
-                        </table>
+                                </tbody>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+            </td>
+            </tr>
+            <?php
+                                }
+                                ?>
+        </table>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
