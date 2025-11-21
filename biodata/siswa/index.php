@@ -58,7 +58,7 @@
                                         <td><?= $data['tg_lahir'] ?></td>
                                         <td>
                                             <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $data['id'] ?>"><i class="fa-solid fa-user"></i></button>
-                                            <a href="formedit.php?<?= $data['id'] ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
+                                            <a href="formedit.php?id=<?=$data['id']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?= $data['id'] ?>"><i class="fa-solid fa-trash"></i></button>
                                             
                                             <!-- Modal -->
