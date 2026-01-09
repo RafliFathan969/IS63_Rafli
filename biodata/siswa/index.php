@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +21,7 @@
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
                         <b>Biodata Siswa</b>
-                        <a href="form_tambah.php" class="float-md-start btn btn-primary btn-sm"><i
+                        <a href="form_tambah.php" class="float-end btn btn-primary btn-sm"><i
                                 class="fa-solid fa-user-plus"></i> Tambah Data</a>
                     </div>
                     <div class="card-body" method="POST">
@@ -58,7 +57,7 @@
                                         <td><?= $data['tg_lahir'] ?></td>
                                         <td>
                                             <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $data['id'] ?>"><i class="fa-solid fa-user"></i></button>
-                                            <a href="formedit.php?id_event=<?=$data['id']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
+                                            <a href="formedit.php?id=<?=$data['id']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?= $data['id'] ?>"><i class="fa-solid fa-trash"></i></button>
                                             
                                             <!-- Modal -->
