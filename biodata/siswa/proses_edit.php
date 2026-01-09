@@ -12,10 +12,13 @@
     $email = $_POST['email'];
     $jk = $_POST['jk'];
     $jur = $_POST['jur'];
+    $nama_foto = $_FILES['foto']['name'];
+    $tmp_foto = $_FILES['foto']['tmp_name'];
+
 
     #3. Query Insert (proses tambah data)
     $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tp_lahir='$tp_lahir', 
-    tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jur='$jur' 
+    tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jur='$jur', foto='$nama_foto' 
     WHERE id='$id'";
 
     $tambah = mysqli_query($koneksi,$query);
@@ -26,4 +29,6 @@
     }else{
         echo "Data Gagal ditambah";
     }
+
+    move_uploaded_file($tmp_foto, "../gambar/$nama_foto");
 ?>
