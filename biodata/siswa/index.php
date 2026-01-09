@@ -76,6 +76,9 @@
                                                             <table class="table">
                                                                 <tbody>
                                                                     <tr>
+                                                                        <td colspan="2"><img src="../gambar/<?= $data['foto'] ?>" height="150" alt=""></td>
+                                                                    </tr>
+                                                                    <tr>
                                                                         <td>Nama</td>
                                                                         <th scope="row"><?= $data['nama'] ?></th>
                                                                     </tr>
