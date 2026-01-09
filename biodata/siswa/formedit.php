@@ -5,7 +5,6 @@ $qry = "SELECT * FROM biodata WHERE id='$idedit'";
 $edit = mysqli_query($koneksi,$qry);
 $data = mysqli_fetch_array($edit);
 ?>
-?>
 <!DOCTYPE html>
 <html lang="en">
 
