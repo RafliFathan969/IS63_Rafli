@@ -31,6 +31,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">NISN</th>
+                                    <th scope="col">Jurusan</th>
                                     <th scope="col">Tanggal Lahir</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -41,7 +42,7 @@
                                 include("../koneksi.php");
 
                                 #2.Query menampilkan data
-                                $qry = "SELECT * FROM biodata";
+                                $qry = "SELECT *, biodata.id AS ids FROM biodata INNER JOIN jurusan ON biodata.jurusans_id = jurusan.id";
 
                                 #3.Menjalankan query
                                 $tampil = mysqli_query($koneksi, $qry);
@@ -54,14 +55,15 @@
                                         <th scope="row"><?= $nomor++ ?></th>
                                         <td><?= $data['nama'] ?></td>
                                         <td><?= $data['nisn'] ?></td>
+                                        <td><?= $data['nama_jurusan'] ?></td>
                                         <td><?= $data['tg_lahir'] ?></td>
                                         <td>
-                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $data['id'] ?>"><i class="fa-solid fa-user"></i></button>
-                                            <a href="formedit.php?id=<?=$data['id']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
-                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?= $data['id'] ?>"><i class="fa-solid fa-trash"></i></button>
+                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $data['ids'] ?>"><i class="fa-solid fa-user"></i></button>
+                                            <a href="formedit.php?id=<?=$data['ids']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
+                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?= $data['ids'] ?>"><i class="fa-solid fa-trash"></i></button>
                                             
                                             <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal<?= $data['id'] ?>" tabindex="-1"
+                                            <div class="modal fade" id="exampleModal<?= $data['ids'] ?>" tabindex="-1"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
@@ -107,10 +109,6 @@
                                                                     <td>Jenis Kelamin</td>
                                                                     <th scope="row"><?= $data['jk'] ?></th>
                                                                 </tr>
-                                                                <tr>
-                                                                    <td>Jurusan</td>
-                                                                    <th scope="row"><?= $data['jur'] ?></th>
-                                                                </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -121,7 +119,7 @@
                                                 </div>
                                             </div>
                                             <!-- Modal Hapus-->
-                                            <div class="modal fade" id="modalhapus<?= $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                            <div class="modal fade" id="modalhapus<?= $data['ids'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
                                                 aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
@@ -134,7 +132,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                            <a href="proseshapus.php?id=<?=$data['id']?>" class="btn btn-danger">Hapus</a>
+                                                            <a href="proseshapus.php?id=<?=$data['ids']?>" class="btn btn-danger">Hapus</a>
                                                         </div>
                                                     </div>
                                                 </div>
