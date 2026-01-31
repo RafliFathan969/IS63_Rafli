@@ -71,24 +71,43 @@
                                 <label for="exampleInputEmail1" class="form-label">Jurusan</label>
                                 <select class="form-control" name="jur" id="">
                                     <option value="">-Pilih Jurusan-</option>
-                                    <?php 
-                                        //kode untuk looping datat jurusan
-                                        include_once('../koneksi.php');
-                                        $qry_jur = "SELECT * FROM jurusan";
-                                        $data_jur = mysqli_query($koneksi,$qry_jur);
-                                        foreach($data_jur as $item_jur){
-                                    ?>
-                                    <option value="<?=$item_jur['id']?>"><?=$item_jur['kode']?> - <?=$item_jur['nama_jurusan']?></option>
                                     <?php
+                                    //kode untuk looping datat jurusan
+                                    include_once('../koneksi.php');
+                                    $qry_jur = "SELECT * FROM jurusan";
+                                    $data_jur = mysqli_query($koneksi, $qry_jur);
+                                    foreach ($data_jur as $item_jur) {
+                                        ?>
+                                        <option value="<?= $item_jur['id'] ?>"><?= $item_jur['kode'] ?> -
+                                            <?= $item_jur['nama_jurusan'] ?></option>
+                                        <?php
                                         //penutup kode looping jurusan
-                                        }
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Gelombang</label>
+                                <select class="form-control" name="gelombang" id="">
+                                    <option value="">-Pilih Gelombang-</option>
+                                    <?php
+                                    //kode untuk looping datat jurusan
+                                    include_once('../koneksi.php');
+                                    $qry_gel = "SELECT * FROM gelombang";
+                                    $data_gel = mysqli_query($koneksi, $qry_gel);
+                                    foreach ($data_gel as $item_gel) {
+                                        ?>
+                                        <option value="<?= $item_gel['id'] ?>"><?= $item_gel['kd_gel'] ?> -
+                                            <?= $item_gel['gelombang'] ?></option>
+                                        <?php
+                                    }
                                     ?>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Foto</label>
-                                <input name="foto" type="file" accept="image/*" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                                <input name="foto" type="file" accept="image/*" class="form-control"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

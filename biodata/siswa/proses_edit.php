@@ -12,6 +12,7 @@
     $email = $_POST['email'];
     $jk = $_POST['jk'];
     $jur = $_POST['jur'];
+    $gelombang = $_POST['gelombang'];
     $nama_foto = $_FILES['foto']['name'];
     $tmp_foto = $_FILES['foto']['tmp_name'];
 
@@ -28,7 +29,7 @@
 
     #3. Query Insert (proses tambah data)
     $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tp_lahir='$tp_lahir', 
-    tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jurusans_id='$jur', foto='$nama_foto' 
+    tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jurusans_id='$jur', gelombangs_id='$gelombang', foto='$nama_foto' 
     WHERE id='$id'";
 
     $tambah = mysqli_query($koneksi,$query);
@@ -37,7 +38,7 @@
     }else{
         #3. Query Insert (proses edit data)
         $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tp_lahir='$tp_lahir', 
-        tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jurusans_id='$jur' 
+        tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jurusans_id='$jur', gelombangs_id='$gelombang' 
         WHERE id='$id'";
     }
 

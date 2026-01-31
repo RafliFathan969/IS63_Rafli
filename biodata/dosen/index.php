@@ -20,7 +20,7 @@
             <div class="col-8 m-auto">
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
-                        <b>Biodata Siswa</b>
+                        <b>Biodata Dosen</b>
                         <a href="form_tambah.php" class="float-end btn btn-primary btn-sm"><i
                                 class="fa-solid fa-user-plus"></i> Tambah Data</a>
                     </div>
