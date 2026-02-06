@@ -26,6 +26,7 @@ if (isset($_POST['tombol'])) {
         if(isset($_POST['cek']) == "yes"){
             //simpan cookie
             setcookie("coo_email",$email,time()+(3600*24*30), "/");
+            header("location:index.php");
         }else{
             //simpan session
             $_SESSION['ses_email'] = $email;
