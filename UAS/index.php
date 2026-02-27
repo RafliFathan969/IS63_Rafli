@@ -112,11 +112,11 @@
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Yakin Data Dengan Mobil <?= $data['nama_unit'] ?> Ingin Dihapus?
+                                                            Yakin Data dari Mobil <?= $data['nama_unit'] ?> Ingin Dihapus?
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                            <a href="proseshapus.php?id=<?=$data['id_kendaraan']?>" class="btn btn-danger">Hapus</a>
+                                                            <a href="proses_hapus.php?id=<?=$data['id_kendaraan']?>" class="btn btn-danger">Hapus</a>
                                                         </div>
                                                     </div>
                                                 </div>
