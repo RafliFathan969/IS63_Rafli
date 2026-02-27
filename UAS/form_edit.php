@@ -1,6 +1,13 @@
+<?php
+include_once("koneksi.php");
+$idedit = $_GET['id'];
+$qry = "SELECT * FROM kendaraan WHERE id_kendaraan='$idedit'";
+$edit = mysqli_query($koneksi,$qry);
+$data = mysqli_fetch_array($edit);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,38 +29,39 @@
                         <b>Aplikasi Dealer</b>
                     </div>
                     <div class="card-body" method="POST">
-                        <form action="proses_tambah.php" method="POST" enctype="multipart/form-data">
+                        <form action="proses_edit.php" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="id_kendaraan" value="<?=$data['id_kendaraan']?>">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Nama Unit</label>
-                                <input name="nama_unit" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['nama_unit']?>" name="nama_unit" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">No Rangka</label>
-                                <input name="no_rangka" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['no_rangka']?>" name="no_rangka" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tahun Produksi</label>
-                                <input name="tahun_produksi" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['tahun_produksi']?>" name="tahun_produksi" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Harga</label>
-                                <input name="harga_jual" type="number" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['harga_jual']?>" name="harga_jual" type="number" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Status</label>
                                 <br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="status_stok" id="inlineRadio1"
-                                        value="tersedia">
+                                    <input class="form-check-input" type="radio" name="status_stok" <?php echo $data['status_stok']=='tersedia' ? 'checked' : '' ?>
+                                    id="inlineRadio1" value="tersedia">
                                     <label class="form-check-label" for="inlineRadio1">Tersedia</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="status_stok" id="inlineRadio2"
-                                        value="terjual">
+                                    <input class="form-check-input" type="radio" name="status_stok" <?php echo $data['status_stok']=='terjual' ? 'checked' : '' ?>
+                                    id="inlineRadio2" value="terjual">
                                     <label class="form-check-label" for="inlineRadio2">Terjual</label>
                                 </div>
                             </div>

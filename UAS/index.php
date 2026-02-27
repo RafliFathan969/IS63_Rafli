@@ -55,7 +55,7 @@
                                         <td><?= $data['status_stok'] ?></td>
                                         <td>
                                             <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $data['id_kendaraan'] ?>"><i class="fa-solid fa-user"></i></button>
-                                            <a href="formedit.php?id=<?=$data['id_kendaraan']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
+                                            <a href="form_edit.php?id=<?=$data['id_kendaraan']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-user-pen"></i></a>
                                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?= $data['id_kendaraan'] ?>"><i class="fa-solid fa-trash"></i></button>
                                             
                                             <!-- Modal -->
@@ -86,6 +86,10 @@
                                                                         <th scope="row"><?= $data['tahun_produksi'] ?></th>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td>Harga</td>
+                                                                        <th scope="row"><?= $data['harga_jual'] ?></th>
+                                                                    </tr>
+                                                                    <tr>
                                                                         <td>Status</td>
                                                                         <th scope="row"><?= $data['status_stok'] ?></th>
                                                                     </tr>
@@ -108,7 +112,7 @@
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Yakin Data Dengan Nama <?= $data['nama_unit'] ?> Ingin Dihapus?
+                                                            Yakin Data Dengan Mobil <?= $data['nama_unit'] ?> Ingin Dihapus?
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
