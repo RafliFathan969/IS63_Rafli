@@ -29,6 +29,6 @@
     if($tambah){
         header("location:index.php");
     } else {
-        echo "Update gagal";
+        echo "Update gagal: " . mysqli_error($koneksi);
     }
 ?>
